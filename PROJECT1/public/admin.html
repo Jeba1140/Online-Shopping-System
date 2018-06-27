@@ -1,0 +1,263 @@
+<html>
+<head>
+<title> Login Page design in html and css</title>
+<script>
+  function validate_signin()
+  {
+      var p=document.getElementById('pass').value;
+	 var pass_pat=/^[0-6]+$/;
+	if (!(pass_pat.test(x1)))
+	{
+	    alert("Enter the valid Regno.Ex:15BIT0354");
+	}
+  }
+</script>
+<script>
+function validate()
+{
+	
+var xmlhttp = new XMLHttpRequest();
+var url = "Json.txt";
+
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myArr = JSON.parse(this.responseText);
+        myFunction(myArr);
+    }
+};
+
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+}
+function myFunction(arr) {
+	 var r=document.myForm.uname.value;
+    var out = r+"";
+    var i;
+    var flag=0;
+    for(i = 0; i < arr.length; i++) {
+        if(r==arr[i].user)
+        {
+        	flag=1;
+        	break;
+        }
+    }
+    /*if(flag==1)
+    	out="Username Exists"+"<br>"+"Successfully Logged In"*/
+    if(flag==1){
+	     document.getElementById('subb').submit();
+	 }
+    else
+    	out="You are not an admin"
+    document.getElementById("id01").innerHTML = out;
+}
+</script>
+<style type="text/css">
+#tfnewsearch{
+	padding:2%;
+	margin-left:10%;
+	}
+ 
+ .tftextinput{
+        width:40%;
+		margin-left:5%;
+		padding: 1.2%;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:90%;
+		border:1px solid #0076a3; border-right:0px;
+		border-top-left-radius: 5px 5px;
+		border-bottom-left-radius: 5px 5px;
+	}
+	.tfbutton {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:1.2vw;
+		outline: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		color: #ffffff;
+		border: solid 1px #0076a3;
+		background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+		border-top-right-radius: 5px 5px;
+		border-bottom-right-radius: 5px 5px;
+	}
+	.tfbutton:hover{
+	border:1px solid  #aed6f1 ;
+	color:yellow;
+	}
+	#sch{
+	padding: 1.2%;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:1.0vw;
+		outline: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		color: #ffffff;
+		border: solid 1px #0076a3;
+		background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+		border-top-right-radius: 5px 5px;
+		border-bottom-right-radius: 5px 5px;
+	}
+	#sch:hover{
+	border:1px solid yellow;
+	}
+	button:hover{
+	border:1px solid yellow;
+	}
+	button:hover{
+	border:1px solid yellow;
+	}
+  button{
+   background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+   border: solid 1px #0076a3;
+   cursor:pointer;
+   color:white;
+   border-radius: 5px 5px;
+   font-size:1vw;
+  height:32.5%;
+   width:8%
+  }
+.th{
+	  width:400px;
+	  cursor:pointer;
+	  color:white;
+	  text-align:center;
+	  font-size:110%;
+	}
+	th:hover{
+	  background-color:white;
+	  color:black;
+	  text-shadow:none;
+	}
+	a{
+	 text-decoration:none;
+	 color:white;
+	}
+	a:hover{
+	   color:black;
+	}
+	#footer{
+	  font-family:cursive;
+	  font-size:90%;
+	}
+body {
+	background-color:#98d4f3;
+	background-repeat:;
+	color: #0D304E;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.5em;
+	}
+h1{
+text-align:center;
+    font-size: 100%; 
+  }
+h1, p {
+	margin-bottom: 3%;
+	}
+strong {
+	font-weight: bold;
+	}
+.uppercase { text-transform: uppercase; }
+
+#login {
+	margin: 10% auto;
+	width: 40%;
+	}
+form fieldset input[type="text"], input[type="password"] {
+background-color:#ffffff;
+border:none;
+border-radius: 3%;
+color: #5a5656;
+font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+font-size:100%;
+height: 50px;
+outline: none;
+padding: 3%;
+width: 98%;
+}
+form fieldset input[type="button"] {
+background-color: #008dde;
+border: none;
+border-radius: 3%;
+color: #f4f4f4;
+cursor: pointer;
+font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+height: 50px;
+text-transform: uppercase;
+width: 98%;
+}
+
+form fieldset a {
+color: dark #5a5656;
+font-size: 100%;
+}
+form fieldset a:hover {
+ text-decoration: underline; 
+ }
+ h1{
+  font-size:120%;
+ color:yellow;
+ font-weight:bolder;
+ background-color:red;
+ }
+ h1.hover{
+   background-color:red;
+ }
+#newu{
+color:white;
+background-color:red;
+text-decoration:none;
+text-align:center;
+}
+ </style>
+</head>
+
+<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+	  $(document).ready(function(){
+	    $(".jq1").focus(function(){
+		  $(this).css("background-color","#e5e5e5");
+		});
+		 $(".jq1").blur(function(){
+        $(this).css("background-color", "#ffffff");
+    });
+	  });
+	</script>
+	<div style="float:left;width:25%;height:20%;background-color:brown;overflow:hidden;margin-top:-1%">
+    <img src="image/logo.jpg" style="height:100%;width:100%"></img>
+</div>
+    
+<div style="width:100%;height:20%;background-color:#0D304E;color:white;margin-top:-1%">
+   <br>
+     <form id="tfnewsearch" method="get" name="searchfield">
+		<input type="text"  placeholder="Search Products here" class="tftextinput" name="q" size="21" maxlength="120%"><input type="submit" id="sch" value="SEARCH" class="tfbutton">
+	 </form>
+</div>
+<div style="100%;height:3.5%;background-color:#0D304E;color:white">
+</div>
+	<div id="login">
+		<h1>ADMIN LOGIN.</h1>
+	<form name="myForm" action="http://127.0.0.1:8081/" id="subb" method="post">
+	<fieldset>
+      Username:
+         <input type="text" name="uname"><br><br>
+          Password: 
+         <input type="text" name="pwd"><br><br>
+         <input type="button" value="Login" onclick="validate()">
+          <div id="id01"></div>
+	</fieldset>
+    </form>
+    </div>
+<div style="width:100%;height:11%;background-color:#0D304E;overflow:hidden">
+
+<a href="intex.html" id="footer">Home</a><br>
+<a href="about2.html" id="footer">About us</a><br>
+<a href="contact2.html" style="margin-top:-22%;" id="footer">Contact us</a>
+
+    <p style="margin-top:-5%;text-align:center;color:white" id="footer">VIT University, Vellore - 632014, Tamil Nadu, India.</p>
+	<p style="margin-top:-3%;text-align:center;color:white" id="footer">Thank you for visiting our page</p>
+
+</div>
+</body>
+</html>

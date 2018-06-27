@@ -1,0 +1,91 @@
+<html>
+<head>
+<title>Online shopping</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+  var newLine="\r\n";
+  var message="If you don't like any Electronics Items, double click on that to hide";
+  message+=newLine;
+  message+="\t\t\t\t\t\tLikewise";
+  message+=newLine;
+  message+="If you don't like any Mobile phones, double click on that to hide";
+ $(document).ready(function(){
+  $("#cato:first").mouseenter(function(){
+    alert(message);
+  })
+  $(".th").click(function(){
+    $("#details").slideToggle(2000);
+	$('html, body').animate({
+      scrollTop: $(".th").offset().top + $('window').height()
+    }, 2000);
+  })
+ });
+ </script>
+ 
+<link rel="stylesheet" type="text/css" href="CSS files/1st page.css"></link>
+
+<script>
+function timeadate() {
+var today = new Date();
+var h = today.getHours();
+var m = today.getMinutes();
+var s = today.getSeconds();
+m = checktime(m);
+s = checktime(s);
+var days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+document.getElementById('dat').innerHTML =new Date().getDate()+"-"+(new Date().getMonth()+1)+"-"+new Date().getFullYear()+"-"+days[new Date().getDay()]+" "+h + ":" + m + ":" + s;
+var t=setTimeout(timeadate,500);
+}
+function checktime(i){
+if(i<10){
+i="0"+i
+};
+return i;
+}
+</script>
+</head>
+
+<body onload="timeadate()">
+   <div class="one" id="sdiv">
+    <a href="intex.html"><img src="image/logo.jpg" style="height:100%;width:100%" alt="logo"></img></a>
+</div>
+<div class="two" id="sdiv" style="display:block">
+    <br>
+      <form id="tfnewsearch" name="search" method="post" form action="http://127.0.0.1:8081/process" target="a">
+		<a href="10.Others/OT_table-1.html" target="a">other phones</a><input type="text"  placeholder="Search Products here" class="tftextinput" name="q" size="21" maxlength="120%"><input type="submit" id="sch" value="SEARCH" class="tfbutton">
+	 </form>
+   </div>
+ <div class="three" id="sdiv"><br><br>
+   <a href="intex.html" style="margin-left:15%"><button class="tfbutton" id="buttonstyle">LOG OUT</button></a>
+      <p id="dat" style="color:white;font-weight:bolder;text-align:center;margin-left:-17%"><br></p>
+   </div>
+ <div class="four" id="sdiv" style="margin-top:0.025%;overflow-y:scroll;overflow-x:hidden">
+    <div id="cato">Electronic Items</div>
+	<div class="cato" onclick="javascript:document.getElementById('xy').src='1.Tv/extv.html'">TV</div>
+	<div class="cato" onclick="javascript:document.getElementById('xy').src='2.Laptop/laptop.html'">Laptops</div>
+    <div class="cato" onclick="javascript:document.getElementById('xy').src='3.Watch/exwatch.html'">Watch</div>
+	<div class="cato" onclick="javascript:document.getElementById('xy').src='4.Camera/camera.html'">Camera</div>
+	
+    <div id="cato" class="msg">Mobile Phones</div>
+	<div class="cato" onclick="javascript:document.getElementById('xy').src='5.Samsung/samsung.html'">Samsung</div>
+	<div class="cato" onclick="javascript:document.getElementById('xy').src='6.Lenova/lenovo1.html'">Lenovo</div>
+	<div class="cato" onclick="javascript:document.getElementById('xy').src='7.Blackberry/Blackberry1.html'">Blackberry</div>
+	<div class="cato" onclick="javascript:document.getElementById('xy').src='8.Micromax/Micromax.html'">Micromax</div>
+	<div class="cato" onclick="javascript:document.getElementById('xy').src='9.HTC/htc.html'">HTC</div>
+	<div class="cato" onclick="javascript:document.getElementById('xy').src='10.Others/others.html'">Others</div>
+	
+   </div>
+   <iframe name="a" id="xy" src="slide/slide.html" style="margin-top: 0.025%; width: 79.4%; height: 80%;"></iframe>
+
+  <div style="width:100%;height:10%;background-color:#0D304E;overflow:hidden">
+<a href="intex.html">Home</a><br>
+<a href="about2.html">About us</a><br>
+<a href="contact2.html" style="margin-top:-20%;">Contact us</a>
+
+    <p style="margin-top:-4%;text-align:center;color:white">VIT University, Vellore - 632014, Tamil Nadu, India.</p>
+	<p style="margin-top:-1%;text-align:center;color:white">Thank you for visiting our page</p>
+
+</div>
+</body>
+</html>  
+   

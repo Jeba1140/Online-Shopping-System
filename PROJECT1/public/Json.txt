@@ -1,0 +1,22 @@
+[
+{
+"user": "Jebaraj",
+ "password":"484"
+},
+{
+"user": "Sharmila",
+"password":"484"
+},
+{
+"user": "Jarina",
+ "password":"484"
+},
+{
+"user": "Gulsath",
+"password":"484"
+},
+{
+"user": "Kunal",
+"password":"484"
+}
+]

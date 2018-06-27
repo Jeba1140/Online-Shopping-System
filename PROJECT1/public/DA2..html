@@ -1,0 +1,55 @@
+<html>
+<head>
+<script>
+function validate()
+{
+	
+var xmlhttp = new XMLHttpRequest();
+var url = "Json.txt";
+
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myArr = JSON.parse(this.responseText);
+        myFunction(myArr);
+    }
+};
+
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+}
+function myFunction(arr) {
+	 var r=document.myForm.uname.value;
+    var out = r+"";
+    var i;
+    var flag=0;
+    for(i = 0; i < arr.length; i++) {
+        if(r==arr[i].user)
+        {
+        	flag=1;
+        	break;
+        }
+    }
+    /*if(flag==1)
+    	out="Username Exists"+"<br>"+"Successfully Logged In"*/
+    if(flag==1){
+	     document.getElementById('subb').submit();
+	 }
+    else
+    	out="Username not registered"
+    document.getElementById("id01").innerHTML = out;
+}
+</script>
+
+<h1>
+LOGIN FROM
+</h1>
+<br>
+<form name="myForm" "http://127.0.0.1:8081/" id="subb" method="post">
+Username:
+<input type="text" name="uname"><br><br>
+Password:
+<input type="text" name="pwd"><br><br>
+<input type="button" value="Login" onclick="validate()">
+<div id="id01"></div>
+</head>
+</html>

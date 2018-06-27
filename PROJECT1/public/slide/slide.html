@@ -1,0 +1,38 @@
+<html>
+<head>
+<style>
+img{
+height:90%;
+width:45%;
+margin-left:25%;
+}
+</style>
+<script>
+var ig,cont,t;
+function imgStart(){
+ig = new Array();
+ig[0]="sl1.png";ig[ 1 ]="sl2.png"; ig[ 2 ]="sl3.png"; ig[ 3 ]="sl4.png";
+document.ig.src =ig[0];
+cont = 0;
+t=setInterval('imgDis()',2000);
+}
+function imgDis()
+{
+if (cont < 4)
+{
+document.ig.src = ig[ cont ];
+cont = cont + 1;
+}
+else
+cont = 0;
+}
+function imgStop()
+{
+clearInterval(t);
+}
+</script>
+</head>
+<body onload="imgStart()" onunload="imgStop()" >
+<img name = "ig" src= "1.jpg"/>
+</body>
+</html>
